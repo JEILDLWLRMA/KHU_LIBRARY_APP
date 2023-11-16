@@ -26,7 +26,7 @@ class _MyButtonState extends State<MyButton> {
           color: widget.reverse
               ? const Color.fromRGBO(173, 29, 25, 1)
               : const Color(0xFF1F2123),
-          borderRadius: BorderRadius.circular(45),
+          borderRadius: BorderRadius.circular(18.0),
         ),
         child: TextButton(
           onPressed: () => widget.onPressed(),
@@ -34,8 +34,8 @@ class _MyButtonState extends State<MyButton> {
               foregroundColor: Colors.black.withOpacity(0.5)),
           child: Padding(
             padding: const EdgeInsets.symmetric(
-              vertical: 20,
-              horizontal: 40,
+              vertical: 18,
+              horizontal: 38,
             ),
             child: Text(
               widget.buttonText,
@@ -79,7 +79,7 @@ class _MainButton extends State<MainButton> {
               ? const Color(0xFF1F2123)
               : const Color.fromRGBO(13, 50, 111, 1),
           borderRadius: BorderRadius.circular(
-              15), // You can adjust this for slight rounding
+              18), // You can adjust this for slight rounding
         ),
         child: TextButton(
           onPressed: () => widget.onPressed(),

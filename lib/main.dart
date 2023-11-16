@@ -69,7 +69,7 @@ class App extends StatelessWidget {
                 reverse: true,
               ),
               const SizedBox(
-                width: 10,
+                width: 15,
               ),
               MyButton(
                 buttonText: ' 메세지 ',
@@ -85,7 +85,7 @@ class App extends StatelessWidget {
             ],
           ),
           const SizedBox(
-            height: 10,
+            height: 15,
           ),
           Row(
             children: [
@@ -107,7 +107,7 @@ class App extends StatelessWidget {
                 reverse: false,
               ),
               const SizedBox(
-                width: 10,
+                width: 15,
               ),
               MyButton(
                 buttonText: ' 그룹 스터디실 ',
@@ -123,7 +123,7 @@ class App extends StatelessWidget {
             ],
           ),
           const SizedBox(
-            height: 10,
+            height: 15,
           ),
           Row(
             children: [
@@ -141,7 +141,7 @@ class App extends StatelessWidget {
                 reverse: true,
               ),
               const SizedBox(
-                width: 5,
+                width: 10,
               ),
               MyButton(
                 buttonText: '도서관 톡',
@@ -156,7 +156,7 @@ class App extends StatelessWidget {
             ],
           ),
           const SizedBox(
-            height: 30,
+            height: 15,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -176,7 +176,7 @@ class App extends StatelessWidget {
                 reverse: false,
               ),
               const SizedBox(
-                width: 10,
+                width: 15,
               ),
               MainButton(
                 buttonText: '공지 사항',
@@ -190,7 +190,7 @@ class App extends StatelessWidget {
                 reverse: true,
               ),
               const SizedBox(
-                width: 10,
+                width: 15,
               ),
               MainButton(
                 buttonText: '관리자 신고',

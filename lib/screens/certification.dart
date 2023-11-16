@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:khu_library/widgets/card.dart';
 
 class Certification extends StatelessWidget {
   const Certification({super.key});
@@ -27,10 +28,17 @@ class Certification extends StatelessWidget {
         ),
       ),
       backgroundColor: const Color(0xFF181818),
-      body: const Column(
+      body: const Row(
         mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [],
+        children: [
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              CertificationCard(),
+            ],
+          ),
+        ],
       ),
     );
   }
