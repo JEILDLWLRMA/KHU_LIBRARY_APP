@@ -9,31 +9,76 @@ class CertificationCard extends StatelessWidget {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          backgroundColor: const Color(0xFF1F2123),
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+          backgroundColor: const Color(0xFF1F2123).withOpacity(0.98),
           title: const Text(
             '외출 또는 퇴실 선택',
-            style: TextStyle(
-              color: Colors.white,
-            ),
+            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+            textAlign: TextAlign.center,
           ),
           content: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              ElevatedButton(
-                onPressed: () {
-                  // Handle 외출 logic here
-                  Navigator.of(context).pop();
-                },
-                child: const Text('외출'),
+              const SizedBox(
+                height: 5,
               ),
-              const SizedBox(height: 10),
-              ElevatedButton(
-                style: const ButtonStyle(),
-                onPressed: () {
-                  // Handle 퇴실 logic here
-                  Navigator.of(context).pop();
-                },
-                child: const Text('퇴실'),
+              const Text(
+                "외출을 누르시면 누른 시점을 기준으로 \n두시간 이내로 자리로 복귀하셔야 합니다. \n퇴실 버튼을 누르는 경우 좌석이 반납됨에 \n유의하시기 바랍니다.",
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+              const SizedBox(
+                height: 15,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ElevatedButton(
+                    onPressed: () {
+                      // Handle 외출 logic here
+                      Navigator.of(context).pop();
+                      Navigator.of(context).pop();
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color.fromRGBO(173, 29, 25, 1),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
+                      minimumSize: const Size(90, 45),
+                    ),
+                    child: const Text(
+                      '외출',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 15),
+                  ElevatedButton(
+                    onPressed: () {
+                      // Handle 퇴실 logic here
+                      Navigator.of(context).pop();
+                      Navigator.of(context).pop();
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color.fromRGBO(173, 29, 25, 1),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
+                      minimumSize: const Size(90, 45),
+                    ),
+                    child: const Text(
+                      '퇴실',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
