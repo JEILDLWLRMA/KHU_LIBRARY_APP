@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:khu_library/screens/notimpl.dart';
 import 'package:khu_library/widgets/roombutton.dart';
+import 'package:khu_library/screens/openroom.dart';
 
 class Reservation extends StatelessWidget {
   const Reservation({super.key});
@@ -51,7 +51,11 @@ class Reservation extends StatelessWidget {
             onTapCallback: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Notimplement()),
+                MaterialPageRoute(
+                  builder: (context) => const Room(
+                    title: '제 1 열람실',
+                  ),
+                ),
               );
             },
           ),
@@ -67,7 +71,9 @@ class Reservation extends StatelessWidget {
             onTapCallback: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Notimplement()),
+                MaterialPageRoute(
+                  builder: (context) => const Room(title: '제 2 열람실'),
+                ),
               );
             },
           ),
@@ -83,7 +89,9 @@ class Reservation extends StatelessWidget {
             onTapCallback: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Notimplement()),
+                MaterialPageRoute(
+                  builder: (context) => const Room(title: '제 3 열람실'),
+                ),
               );
             },
           ),

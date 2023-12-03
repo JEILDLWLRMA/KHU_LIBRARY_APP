@@ -7,6 +7,7 @@ import 'package:khu_library/screens/notimpl.dart';
 import 'package:khu_library/screens/certification.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:khu_library/screens/myseat.dart';
+import 'package:khu_library/screens/report.dart';
 
 void main() {
   runApp(
@@ -200,7 +201,7 @@ class App extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const Notimplement(),
+                      builder: (context) => const Report(),
                     ),
                   );
                 },
