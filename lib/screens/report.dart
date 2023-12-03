@@ -55,7 +55,6 @@ class _ReportState extends State<Report> {
             TextButton(
               onPressed: () {
                 Navigator.of(context).pop();
-                Navigator.of(context).pop();
               },
               child: const Text('확인'),
             ),
