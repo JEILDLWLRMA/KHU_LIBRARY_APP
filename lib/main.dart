@@ -1,6 +1,5 @@
-//main.dart
-
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:khu_library/screens/reservation.dart';
 import 'package:khu_library/widgets/mybutton.dart';
 import 'package:khu_library/screens/notimpl.dart';
@@ -9,16 +8,27 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:khu_library/screens/myseat.dart';
 import 'package:khu_library/screens/report.dart';
 
-void main() {
-  runApp(
-    const MaterialApp(
-      home: App(),
-    ),
-  );
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(const MaterialApp(
+    home: App(),
+  ));
 }
 
 class App extends StatelessWidget {
   const App({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      home: AppHomePage(),
+    );
+  }
+}
+
+class AppHomePage extends StatelessWidget {
+  const AppHomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -65,7 +75,8 @@ class App extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const Reservation()),
+                      builder: (context) => const Reservation(),
+                    ),
                   );
                 },
                 reverse: true,
@@ -79,7 +90,8 @@ class App extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const Notimplement()),
+                      builder: (context) => const Notimplement(),
+                    ),
                   );
                 },
                 reverse: false,
@@ -118,7 +130,8 @@ class App extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const Notimplement()),
+                      builder: (context) => const Notimplement(),
+                    ),
                   );
                 },
                 reverse: true,
@@ -173,7 +186,8 @@ class App extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const Certification()),
+                      builder: (context) => const Certification(),
+                    ),
                   );
                 },
                 reverse: false,
@@ -187,7 +201,8 @@ class App extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const Notimplement()),
+                      builder: (context) => const Notimplement(),
+                    ),
                   );
                 },
                 reverse: true,
