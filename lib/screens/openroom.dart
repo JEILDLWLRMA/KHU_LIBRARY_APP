@@ -14,7 +14,10 @@ class Room extends StatefulWidget {
 class _RoomState extends State<Room> with AutomaticKeepAliveClientMixin {
   int currentReservationIndex = -1;
   late DateTime reservationStartTime;
-  late Timer countdownTimer;
+  late Timer countdownTimer = Timer(
+    const Duration(seconds: 0),
+    () => {},
+  ); // 초기화 추가
   static const int reservationDuration = 4 * 60 * 60;
 
   @override
