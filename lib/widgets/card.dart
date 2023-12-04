@@ -39,7 +39,6 @@ class CertificationCard extends StatelessWidget {
                     onPressed: () {
                       // Handle 외출 logic here
                       Navigator.of(context).pop();
-                      Navigator.of(context).pop();
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color.fromRGBO(173, 29, 25, 1),
@@ -60,7 +59,6 @@ class CertificationCard extends StatelessWidget {
                   ElevatedButton(
                     onPressed: () {
                       // Handle 퇴실 logic here
-                      Navigator.of(context).pop();
                       Navigator.of(context).pop();
                     },
                     style: ElevatedButton.styleFrom(
