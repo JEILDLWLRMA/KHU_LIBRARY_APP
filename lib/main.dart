@@ -75,7 +75,7 @@ class AppHomePage extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const Reservation(),
+                      builder: (context) => Reservation(),
                     ),
                   );
                 },

@@ -83,6 +83,25 @@ class _ReportState extends State<Report> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            SizedBox(
+              height: 50,
+              child: Image.asset(
+                  '/Users/hyeokseung/Desktop/DesignThinking/KHU_LIBRARY_APP/assets/images/khu.png'),
+            ),
+            const SizedBox(
+              height: 40,
+            ),
+            const Text(
+              '부정한 방법으로 좌석을 사석화 하였거나, \n도서관의 분위기를 저해하는 행위를 \n신고할 때 사용할 수 있습니다.',
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(
+              height: 40,
+            ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextField(
@@ -94,15 +113,15 @@ class _ReportState extends State<Report> {
                   labelStyle: TextStyle(color: Colors.white),
                   hintStyle: TextStyle(color: Colors.white),
                   focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                    borderRadius: BorderRadius.all(Radius.circular(23.0)),
                     borderSide: BorderSide(width: 1, color: Colors.white),
                   ),
                   enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                    borderRadius: BorderRadius.all(Radius.circular(23.0)),
                     borderSide: BorderSide(width: 1, color: Colors.white),
                   ),
                   border: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                    borderRadius: BorderRadius.all(Radius.circular(23.0)),
                   ),
                 ),
                 keyboardType: TextInputType.text,
@@ -120,11 +139,11 @@ class _ReportState extends State<Report> {
                   hintStyle: TextStyle(color: Colors.white),
                   labelStyle: TextStyle(color: Colors.white),
                   focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                    borderRadius: BorderRadius.all(Radius.circular(23.0)),
                     borderSide: BorderSide(width: 1, color: Colors.white),
                   ),
                   enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                    borderRadius: BorderRadius.all(Radius.circular(23.0)),
                     borderSide: BorderSide(width: 1, color: Colors.white),
                   ),
                   border: OutlineInputBorder(
@@ -138,8 +157,18 @@ class _ReportState extends State<Report> {
             ElevatedButton(
               onPressed: _sendReport,
               style: ElevatedButton.styleFrom(
+                  minimumSize: const Size(85, 45),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(23),
+                  ),
                   backgroundColor: const Color.fromRGBO(173, 29, 25, 1)),
-              child: const Text('신고'),
+              child: const Text(
+                '신고',
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
             ),
           ],
         ),

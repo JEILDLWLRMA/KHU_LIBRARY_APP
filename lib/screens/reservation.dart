@@ -3,7 +3,11 @@ import 'package:khu_library/widgets/roombutton.dart';
 import 'package:khu_library/screens/openroom.dart';
 
 class Reservation extends StatelessWidget {
-  const Reservation({super.key});
+  // Create a global key for the Room widget
+  final GlobalKey<NavigatorState> roomNavigatorKey =
+      GlobalKey<NavigatorState>();
+
+  Reservation({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -49,14 +53,22 @@ class Reservation extends StatelessWidget {
             icon: Icons.account_balance_outlined,
             isInverted: false,
             onTapCallback: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const Room(
-                    title: '제 1 열람실',
+              // Check if the Room instance already exists
+              if (roomNavigatorKey.currentState != null &&
+                  roomNavigatorKey.currentState!.canPop()) {
+                // If it exists, pop to the existing instance
+                roomNavigatorKey.currentState!.pop();
+              } else {
+                // If it doesn't exist, create a new instance
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const Room(
+                      title: '제 1 열람실',
+                    ),
                   ),
-                ),
-              );
+                );
+              }
             },
           ),
           const SizedBox(
@@ -69,12 +81,20 @@ class Reservation extends StatelessWidget {
             icon: Icons.account_balance_outlined,
             isInverted: true,
             onTapCallback: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const Room(title: '제 2 열람실'),
-                ),
-              );
+              // Check if the Room instance already exists
+              if (roomNavigatorKey.currentState != null &&
+                  roomNavigatorKey.currentState!.canPop()) {
+                // If it exists, pop to the existing instance
+                roomNavigatorKey.currentState!.pop();
+              } else {
+                // If it doesn't exist, create a new instance
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const Room(title: '제 2 열람실'),
+                  ),
+                );
+              }
             },
           ),
           const SizedBox(
@@ -87,12 +107,20 @@ class Reservation extends StatelessWidget {
             icon: Icons.account_balance_outlined,
             isInverted: false,
             onTapCallback: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const Room(title: '제 3 열람실'),
-                ),
-              );
+              // Check if the Room instance already exists
+              if (roomNavigatorKey.currentState != null &&
+                  roomNavigatorKey.currentState!.canPop()) {
+                // If it exists, pop to the existing instance
+                roomNavigatorKey.currentState!.pop();
+              } else {
+                // If it doesn't exist, create a new instance
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const Room(title: '제 3 열람실'),
+                  ),
+                );
+              }
             },
           ),
         ],
